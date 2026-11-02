@@ -30,3 +30,8 @@ if (dateInput) {
     const minDate = today.toISOString().split('T')[0];
     dateInput.setAttribute('min', minDate);
 }
+
+/*
+Add pictures in order page
+restrict one order to one day
+*/
