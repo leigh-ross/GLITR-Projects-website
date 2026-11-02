@@ -13,7 +13,7 @@ function handleScroll() {
         header.classList.add('scrolled'); 
         if (logo) logo.src = "images/GLITRLOGOLIGHTBG.png";
     }
-}
+};
 
 handleScroll();
 window.addEventListener('scroll', handleScroll);
@@ -22,8 +22,8 @@ window.addEventListener('scroll', handleScroll);
 const dateInput = document.getElementById('event-date');
 
 if (dateInput) { 
-    const today = new Date();
-    today.setDate(today.getDate() + 14);
-    const minDate = today.toISOString().split('T')[0];
-    dateInput.setAttribute('min', minDate);
-}
+    const today = new Date();                               // get todays date
+    today.setDate(today.getDate() + 14);                    // adds 14 days to todays date
+    const minDate = today.toISOString().split('T')[0];      // minDate is todays date in std date format in string form.
+    dateInput.setAttribute('min', minDate);                 // sets the first date to pick (min) to our chosen date (minDate)
+};
