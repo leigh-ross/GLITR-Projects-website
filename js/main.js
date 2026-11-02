@@ -22,8 +22,13 @@ window.addEventListener('scroll', handleScroll);
 const dateInput = document.getElementById('event-date');
 
 if (dateInput) { 
-    const today = new Date();
-    today.setDate(today.getDate() + 14);
-    const minDate = today.toISOString().split('T')[0];
-    dateInput.setAttribute('min', minDate);
+    const today = new Date();                           // get todays date
+    today.setDate(today.getDate() + 14);                // add 14 days to date and set as current date
+    const minDate = today.toISOString().split('T')[0];  // store current date in string format for set attr
+    dateInput.setAttribute('min', minDate);             // set min attribute to today+14, date pick range is (today+14, infinity)
 }
+
+/*
+add pics input in order page
+restrict orders to one order on a particular date
+*/
